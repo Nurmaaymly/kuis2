@@ -6,6 +6,8 @@ public class kuis18Lya {
         int jam = -1;
         int total = 0;
         int jumlahKendaraan = 0;
+        int nim2 = 75;
+        int batas = (nim2 % 3) + 2;
 
         while (jam != 0) {
             // Tarif: jam pertama Rp 5000, jam berikutnya Rp 3000 per jam
@@ -15,6 +17,11 @@ public class kuis18Lya {
 
                 if (jam < 1 || jam > 24) {
                     System.out.println("Input tidak valid. Masukkan jam antara 1 hingga 24.");
+                    
+                    for (int i = 0; i < batas; i++) {
+                        System.out.println("Kesempatan " + (i + 1) + " dari " + batas);
+                    }
+                    
                 } else {
                     int biaya = 5000 + (jam - 1) * 3000;
                     total += biaya;
